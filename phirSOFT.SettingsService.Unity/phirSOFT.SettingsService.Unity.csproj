@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <Description>Provides the `SettingsValueAttribute`, witch can be used to inject settings within the unity container.</Description>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/phirSOFT/SettingsService.Unity</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/phirSOFT/SettingsService.Unity</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>phirSOFT</Company>
+    <Authors>phirSOFT</Authors>
+    <Product>SettingsService.Unity</Product>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/phirSOFT/SettingsService.Unity/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
