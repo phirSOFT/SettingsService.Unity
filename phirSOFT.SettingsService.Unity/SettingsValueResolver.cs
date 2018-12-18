@@ -6,13 +6,13 @@ using Unity.Policy;
 
 namespace phirSOFT.SettingsService.Unity
 {
-    internal class SettingsValueResover : IResolverPolicy
+    internal class SettingsValueResolver : IResolverPolicy
     {
         private readonly string _serviceInstance;
         private readonly string _settingsKey;
         private readonly Type _settingsType;
 
-        public SettingsValueResover(string serviceInstance, string settingsKey, Type settingsType)
+        public SettingsValueResolver(string serviceInstance, string settingsKey, Type settingsType)
         {
             _serviceInstance = serviceInstance;
             _settingsKey = settingsKey;
