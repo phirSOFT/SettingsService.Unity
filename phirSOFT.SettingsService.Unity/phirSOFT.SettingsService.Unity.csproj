@@ -1,16 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <Description>Provides the `SettingsValueAttribute`, witch can be used to inject settings within the unity container.</Description>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/phirSOFT/SettingsService.Unity</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/phirSOFT/SettingsService.Unity</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>phirSOFT</Company>
+    <Authors>phirSOFT</Authors>
+    <Product>SettingsService.Unity</Product>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/phirSOFT/SettingsService.Unity/master/LICENSE</PackageLicenseUrl>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <FileVersion>0.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nito.AsyncEx.Context" Version="1.0.4" />
-    <PackageReference Include="Unity" Version="5.8.6" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\phirSOFT.SettingsService\phirSOFT.SettingsService.csproj" />
+    <PackageReference Include="Nito.AsyncEx.Context" Version="1.1.0" />
+    <PackageReference Include="phirSOFT.SettingsService" Version="0.1.36" />
+    <PackageReference Include="Unity.Abstractions" Version="3.3.1" />
   </ItemGroup>
 
 </Project>

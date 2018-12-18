@@ -12,7 +12,7 @@ install:
 
 dotnet_csproj:
   patch: true
-  file: '**\*.csproj'
+  file: 'phirSOFT.SettingsService.Unity\phirSOFT.SettingsService.Unity.csproj'
   version: $(GitVersion_FullSemVer)
   package_version: $(GitVersion_FullSemVer)
   assembly_version: $(GitVersion_AssemblySemVer)
