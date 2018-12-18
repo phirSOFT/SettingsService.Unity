@@ -1,4 +1,6 @@
 ﻿using System;
+using Unity.Attributes;
+using Unity.Policy;
 
 namespace phirSOFT.SettingsService.Unity
 {
@@ -7,7 +9,7 @@ namespace phirSOFT.SettingsService.Unity
     ///     Use this attribute, to annotate, that the property or parameter is resolved from a unity container.
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Property)]
-    public class SettingValueAttribute : Attribute
+    public class SettingValueAttribute : DependencyResolutionAttribute
     {
         /// <inheritdoc />
         /// <summary>
@@ -38,5 +40,10 @@ namespace phirSOFT.SettingsService.Unity
         ///     Gets the type of the setting to be resolved.
         /// </summary>
         public Type SettingType { get; }
+
+        public override IResolverPolicy CreateResolver(Type typeToResolve)
+        {
+            return new SettingsValueResolver(ServiceInstance, SettingKey, SettingType ?? typeToResolve);
+        }
     }
 }
