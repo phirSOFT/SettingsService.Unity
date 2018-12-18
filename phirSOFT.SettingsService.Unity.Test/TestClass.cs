@@ -18,7 +18,6 @@ namespace phirSOFT.SettingsService.Unity.Test
         public void TestMethod()
         {
             var container = new UnityContainer();
-            container.AddNewExtension<SettingsServiceContainerExtension>();
 
             container.RegisterType<IReadOnlySettingsService, ISettingsService>();
             container.RegisterType<ISettingsService, CallResponseService>();
@@ -32,7 +31,6 @@ namespace phirSOFT.SettingsService.Unity.Test
 
     internal class TestSampleClass
     {
-        [global::Unity.Attributes.Dependency]
         [SettingValue("Test1")]
         public string Test1 { get; set; }
 
