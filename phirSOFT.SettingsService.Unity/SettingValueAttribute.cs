@@ -18,7 +18,7 @@ namespace phirSOFT.SettingsService.Unity
         /// <param name="settingKey">The key of the setting</param>
         /// <param name="serviceInstance">The name of the settings service instance to use.</param>
         /// <param name="settingType">The type of the setting to resolve. If null the field type will be used.</param>
-        public SettingValueAttribute(string settingKey, string serviceInstance = "", Type settingType = null)
+        public SettingValueAttribute(string settingKey, string serviceInstance = null, Type settingType = null)
         {
             SettingKey = settingKey;
             ServiceInstance = serviceInstance;
