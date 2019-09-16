@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using phirSOFT.SettingsService;
+using phirSOFT.SettingsService.Abstractions;
 
 namespace phirSOFT.SettingsService.Unity.Test
 {
@@ -42,6 +43,11 @@ namespace phirSOFT.SettingsService.Unity.Test
         }
 
         public Task DiscardAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> IsRegisteredAsync(string key)
         {
             throw new NotImplementedException();
         }

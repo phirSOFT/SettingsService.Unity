@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using phirSOFT.SettingsService.Abstractions;
 using Unity;
 using Unity.Injection;
 using Unity.Registration;
@@ -14,18 +15,34 @@ namespace phirSOFT.SettingsService.Unity.Test
     [TestFixture]
     public class TestClass
     {
+      
         [Test]
-        public void TestMethod()
+        public void TestProperty()
         {
-            var container = new UnityContainer();
+            UnityContainer container = CreateContainer();
 
-            container.RegisterType<IReadOnlySettingsService, ISettingsService>();
-            container.RegisterType<ISettingsService, CallResponseService>();
+            var instance = container.Resolve<TestSampleClass>();
+
+            Assert.AreEqual("Test1", instance.Test1);
+        }
+
+        [Test]
+        public void TestConstructor()
+        {
+            UnityContainer container = CreateContainer();
 
             var instance = container.Resolve<TestSampleClass>();
 
             Assert.AreEqual("test", instance.Test);
-            Assert.AreEqual("Test1", instance.Test1);
+        }
+
+        private static UnityContainer CreateContainer()
+        {
+            var container = new UnityContainer();
+            container.AddNewExtension<SettingsServiceContainerExtension>();
+            container.RegisterType<IReadOnlySettingsService, ISettingsService>();
+            container.RegisterType<ISettingsService, CallResponseService>();
+            return container;
         }
     }
 
