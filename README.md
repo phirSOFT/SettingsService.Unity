@@ -19,13 +19,13 @@ public IUnityContaier CreateUnityContainer()
 Then you can reveice your settings via the `SettingsValueAttribute`. This workls for constructors and properties.
 The attribute takes the key of the setting as mandatory parameter. You can optional specify the named instance to use and the type of the setting. If no type is specified the settings type is inferred by the parameter resp. proptery type.
 
-    class SampleClass
+``` c-sharp
+class SampleClass
+{
+    // inject the user.names property
+    public SampleClass([SettingValue("user.names")] IEnumerable<string> usernames)
     {
-        // inject the user.names property
-        public SampleClass(
-			[SettingValue("user.names")] IEnumerable<string> usernames
-			[SettingValue("Foo", typeof(Foo)) Bar bar,)
-        {
-            // do something with usernames
-        }
+        // do something with usernames
     }
+}
+```
