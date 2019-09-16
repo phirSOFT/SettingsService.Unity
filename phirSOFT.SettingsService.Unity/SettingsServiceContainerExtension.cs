@@ -12,8 +12,12 @@ using Unity.Resolution;
 
 namespace phirSOFT.SettingsService.Unity
 {
+    /// <summary>
+    /// Provides a <see cref="UnityContainerExtension"/> that registers the resolvers for the <see cref="SettingValueAttribute"/>.
+    /// </summary>
     public class SettingsServiceContainerExtension : UnityContainerExtension
     {
+        /// <inheritdoc />
         protected override void Initialize()
         {
             var strategies = (IEnumerable<MemberProcessor>)Context.BuildPlanStrategies;
