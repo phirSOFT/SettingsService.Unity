@@ -6,11 +6,13 @@ This repository contains the source code for the `phirSOFT.SettingsService.Unity
 
 You can inject settings as properties or constructor arguments using the `SettingsValueAttribute`. The attribute takes the key of the setting as mandatory parameter. You can optional specify the named instance to use and the type of the setting. If no type is specified the settings type is inferred by the parameter resp. proptery type.
 
-    class SampleClass
+``` c-sharp
+class SampleClass
+{
+    // inject the user.names property
+    public SampleClass([SettingValue("user.names")] IEnumerable<string> usernames)
     {
-        // inject the user.names property
-        public SampleClass([SettingValue("user.names")] IEnumerable<string> usernames)
-        {
-            // do something with usernames
-        }
+        // do something with usernames
     }
+}
+```
