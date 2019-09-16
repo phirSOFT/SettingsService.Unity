@@ -5,13 +5,13 @@ trigger:
   - master
   - release/*
   - hotfix/*
-  - feature
+  - feature/*
 
 pr:
   - master
   - release/*
   - hotfix/*
-  - feature
+  - feature/*
 
 variables:
   Release.IsPrerelease: $[and(ne(variables['Build.Reason'], 'PullRequest'), or(startsWith(variables['Build.SourceBranch'], 'refs/heads/release/'), startsWith(variables['Build.SourceBranch'], 'refs/heads/hotfix/')))]
