@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ci-Items", "Ci-Items", "{62
 	ProjectSection(SolutionItems) = preProject
 		azure-pipeline.yml = azure-pipeline.yml
 		GitVersion.yml = GitVersion.yml
+		global.json = global.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{3FC30193-CC13-42EB-B119-FB55A7443442}"
