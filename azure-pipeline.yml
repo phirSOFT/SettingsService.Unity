@@ -2,16 +2,24 @@ pool:
   vmImage: "windows-2019"
 
 trigger:
-  - master
-  - release/*
-  - hotfix/*
-  - feature/*
+  branches:
+    include:
+      - master
+      - release/*
+      - hotfix/*
+      - feature/*
+    exclude:
+      - **/*-restyled
 
 pr:
-  - master
-  - release/*
-  - hotfix/*
-  - feature/*
+  branches:
+    include:
+      - master
+      - release/*
+      - hotfix/*
+      - feature/*
+    exclude:
+      - **/*-restyled
 
 variables:
   Release.IsPrerelease: $[and(ne(variables['Build.Reason'], 'PullRequest'), or(startsWith(variables['Build.SourceBranch'], 'refs/heads/release/'), startsWith(variables['Build.SourceBranch'], 'refs/heads/hotfix/')))]
