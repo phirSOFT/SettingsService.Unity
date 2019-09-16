@@ -1,6 +1,7 @@
 # SettingsService.Unity
 
-This repository contains the source code for the `phirSOFT.SettingsService.Unity` package. This package allows you to inject settings of a settings service via unity. The source has been forked out from the [SettingsService](https://github.com/phirSOFT/SettingsService) repository to decouple the version numbers of the packages.
+This repository contains the source code for the [`phirSOFT.SettingsService.Unity`](https://www.nuget.org/packages/phirSOFT.SettingsService.Unity) package.
+This package allows you to inject settings of a settings service via unity. The source has been forked out from the [SettingsService](https://github.com/phirSOFT/SettingsService) repository to decouple the version numbers of the packages.
 
 ## Example
 
