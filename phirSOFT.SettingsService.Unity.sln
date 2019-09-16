@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "phirSOFT.SettingsService.Unity", "phirSOFT.SettingsService.Unity\phirSOFT.SettingsService.Unity.csproj", "{76A72960-F6B5-4F15-ABF2-4DD6D4CFBDC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "phirSOFT.SettingsService.Unity.Test", "phirSOFT.SettingsService.Unity.Test\phirSOFT.SettingsService.Unity.Test.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "phirSOFT.SettingsService.Unity.Test", "phirSOFT.SettingsService.Unity.Test\phirSOFT.SettingsService.Unity.Test.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ci-Items", "Ci-Items", "{620F707A-ECB7-4488-A574-2D3C44C535D2}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 	ProjectSection(SolutionItems) = preProject
 		Changelog.md = Changelog.md
 		README.md = README.md
+		ReleaseNotes.md = ReleaseNotes.md
 	EndProjectSection
 EndProject
 Global
