@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using phirSOFT.SettingsService;
@@ -13,7 +14,7 @@ namespace phirSOFT.SettingsService.Unity.Test
         public Task<object> GetSettingAsync(string key, Type type)
         {
             if (type != typeof(string))
-                return Task.FromResult(type.IsValueType ? Activator.CreateInstance(type) : null);
+                return Task.FromResult(type.GetTypeInfo().IsValueType ? Activator.CreateInstance(type) : null);
             return Task.FromResult((object) key);
         }
 
