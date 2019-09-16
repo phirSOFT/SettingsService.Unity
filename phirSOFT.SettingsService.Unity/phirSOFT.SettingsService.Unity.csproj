@@ -4,8 +4,6 @@
     <TargetFramework>netstandard1.3</TargetFramework>
     <Description>Provides the `SettingsValueAttribute`, witch can be used to inject settings within the unity container.</Description>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-    <RepositoryUrl>https://github.com/phirSOFT/SettingsService.Unity</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/phirSOFT/SettingsService.Unity</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>phirSOFT</Company>
@@ -13,6 +11,9 @@
     <Product>SettingsService.Unity</Product>
     <PackageLicenseUrl>https://raw.githubusercontent.com/phirSOFT/SettingsService.Unity/master/LICENSE</PackageLicenseUrl>
     <UseFullSemVerForNuget>true</UseFullSemVerForNuget>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
 
@@ -37,6 +38,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="2.9.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19367-01">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
