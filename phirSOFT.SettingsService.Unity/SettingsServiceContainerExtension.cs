@@ -17,16 +17,36 @@ namespace phirSOFT.SettingsService.Unity
         protected override void Initialize()
         {
             var strategies = (IEnumerable<MemberProcessor>)Context.BuildPlanStrategies;
-            var processor = (ConstructorProcessor)strategies.First(s => s is ConstructorProcessor);
-            processor.Add(typeof(SettingValueAttribute), _ => null, SettingResolutionFactory);
+
+            foreach (MemberProcessor memberProcessor in strategies)
+            {
+                switch (memberProcessor)
+                {
+                    case ConstructorProcessor constructorProcessor:
+                        constructorProcessor.Add(typeof(SettingValueAttribute), _ => null, SettingResolutionFactory);
+                        break;
+                    case PropertyProcessor propertyProcessor:
+                        propertyProcessor.Add(typeof(SettingValueAttribute), _ => null, SettingResolutionFactory);
+                        break;
+                }
+            }
         }
 
         private ResolveDelegate<BuilderContext> SettingResolutionFactory(Attribute attribute, object info, object value)
         {
-            var type = ((ParameterInfo)info).ParameterType;
+            Type type = null;
+            if (info is ParameterInfo parameterInfo)
+            {
+                type = parameterInfo.ParameterType;
+            }
+            else if (info is PropertyInfo propertyInfo)
+            {
+                type = propertyInfo.PropertyType;
+            }
+
             return (ref BuilderContext context) =>
             {
-                if (!(attribute is SettingValueAttribute settingValueAttribute))
+                if (!(attribute is SettingValueAttribute settingValueAttribute) || type == null)
                     return value;
 
                 IReadOnlySettingsService readOnlySettingsService = (IReadOnlySettingsService)
