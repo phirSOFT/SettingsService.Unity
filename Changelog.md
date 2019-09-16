@@ -12,4 +12,6 @@ Previous releases followed a simmilar versioning scheme, but is was not strictly
 - Start the changelog
 ### Changed
 - Change license from GPL to MIT (44f71136b9f52b361b38d5ec5e2f776da0e1b9e4)
-- #2 Migrate from Unity 3.3.1 to Unity 5.11.1.
+- [Issue-2] Migrate from Unity 3.3.1 to Unity 5.11.1.
+
+[Issue-2]: https://github.com/phirSOFT/SettingsService.Unity/issues/2
