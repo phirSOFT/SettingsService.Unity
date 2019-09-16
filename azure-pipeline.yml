@@ -10,7 +10,7 @@ trigger:
       - hotfix/*
       - feature/*
     exclude:
-      - '**/*-restyled'
+      - "**/*-restyled"
 
 pr:
   branches:
@@ -20,7 +20,7 @@ pr:
       - hotfix/*
       - feature/*
     exclude:
-      - '**/*-restyled'
+      - "**/*-restyled"
 
 variables:
   Release.IsPrerelease: $[and(ne(variables['Build.Reason'], 'PullRequest'), or(startsWith(variables['Build.SourceBranch'], 'refs/heads/release/'), startsWith(variables['Build.SourceBranch'], 'refs/heads/hotfix/')))]
